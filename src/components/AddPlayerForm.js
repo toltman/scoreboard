@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class AddPlayerFrom extends Component {
   playerInput = React.createRef();
@@ -22,5 +23,9 @@ class AddPlayerFrom extends Component {
     );
   }
 }
+
+AddPlayerFrom.propTypes = {
+  handleAddPlayer: PropTypes.func,
+};
 
 export default AddPlayerFrom;
