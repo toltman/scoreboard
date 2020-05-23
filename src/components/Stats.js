@@ -1,12 +1,12 @@
 import React from "react";
 
-const Stats = (props) => {
-  const totalPlayers = props.players.length;
+const Stats = ({ players }) => {
+  const totalPlayers = players.length;
   //   let totalPoints = 0;
-  //   props.players.forEach((p) => {
+  //   players.forEach((p) => {
   //     totalPoints += p.score;
   //   });
-  const totalPoints = props.players.reduce((acc, p) => acc + p.score, 0);
+  const totalPoints = players.reduce((acc, p) => acc + p.score, 0);
   return (
     <table className="stats">
       <tbody>

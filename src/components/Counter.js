@@ -1,19 +1,19 @@
 import React from "react";
 
-const Counter = (props) => {
+const Counter = ({ id, score, changeScore }) => {
   return (
     <div className="counter">
       <button
         className="counter-action decrement"
-        onClick={() => props.changeScore(props.id, -1)}
+        onClick={() => changeScore(id, -1)}
       >
         {" "}
         -{" "}
       </button>
-      <span className="counter-score">{props.score}</span>
+      <span className="counter-score">{score}</span>
       <button
         className="counter-action increment"
-        onClick={() => props.changeScore(props.id, 1)}
+        onClick={() => changeScore(id, 1)}
       >
         {" "}
         +{" "}
